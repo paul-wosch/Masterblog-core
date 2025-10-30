@@ -1,6 +1,6 @@
 """Provide the Blog class."""
 from post import Post
-
+from blog.storage import get_next_id, save_id_to_sequence
 
 class Blog:
     """Manage a collection of blog posts."""
