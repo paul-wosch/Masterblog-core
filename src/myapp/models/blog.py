@@ -1,7 +1,6 @@
 """Provide the Blog class."""
 from post import Post
-from blog.storage.filestore import read_json_file, write_json_file
-from blog.storage.sequence import get_next_id, save_id_to_sequence
+from myapp.storage import read_json_file, write_json_file, get_next_id, save_id_to_sequence
 
 TEMP_POST_ID = -1
 
@@ -54,25 +53,6 @@ class Blog:
 
 def main():
     """Main function for testing."""
-    """
-    blog_posts = [{"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post.", "likes": 0},
-                  {"id": 2, "author": "Jane Doe", "title": "Second Post", "content": "This is another post.", "likes": 0},
-                  {"id": 3, "author": "Anonymous", "title": "Third Post", "content": "This is another post.", "likes": 0},
-                  {"id": 4, "author": "Mad Max", "title": "Forth Post", "content": "This is another post.", "likes": 0},
-                  {"id": 5, "author": "Lisa Max", "title": "Fifth Post", "content": "This is another post.", "likes": 0},
-
-    ]"""
-    # """
-    my_blog = Blog(read_json_file("data/test.json"))
-    print(my_blog.get(1).content)
-    print(my_blog.get_posts())
-    """
-    my_blog.get(1).update(author="Test")
-    print(my_blog.get_posts())
-    my_blog.delete(my_blog.get(1))
-    print(my_blog.get_posts())
-    """
-    # """
 
 
 if __name__ == "__main__":

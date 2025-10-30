@@ -12,7 +12,7 @@ description = "A blog application with JSON storage"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["blog*"]
+include = ["myapp*"]
 
 [tool.setuptools.package-dir]
 "" = "src"
