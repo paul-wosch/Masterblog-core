@@ -1,13 +1,6 @@
 """Provide functions to keep track of auto-incremented primary keys."""
-from pathlib import Path
 from myapp.storage import read_json_file, write_json_file
-
-# Get the project root and go up three levels
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
-# Set path to sequence storage
-SEQUENCE_FILE = Path("sequence.json")
-DATA_DIR = Path("data")
-SEQUENCE_FILE_PATH = (PROJECT_ROOT / DATA_DIR / SEQUENCE_FILE).resolve()
+from myapp.config import SEQUENCE_FILE_PATH
 
 
 def get_next_id(model: str) -> int:

@@ -1,6 +1,7 @@
 """Provide the Blog class."""
 from post import Post
 from myapp.storage import read_json_file, write_json_file, get_next_id, save_id_to_sequence
+from myapp.config import BLOG_FILE_PATH
 
 TEMP_POST_ID = -1
 
