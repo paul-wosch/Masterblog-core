@@ -1,13 +1,23 @@
-from flask import Flask
-from myapp.config import TEMPLATES_PATH, STATIC_PATH
+from flask import Flask, render_template
+from myapp.storage import write_json_file
+from myapp.config import TEMPLATES_PATH, STATIC_PATH, BLOG_FILE_PATH
+from myapp.models.blog import Blog
+
+# Create blog storage if missing (new blog)
+if not BLOG_FILE_PATH.exists():
+    data = []
+    write_json_file(BLOG_FILE_PATH, data)
+# Create the blog instance
+my_blog = Blog()
 
 app = Flask(__name__, template_folder=TEMPLATES_PATH, static_folder=STATIC_PATH)
-
 
 @app.route("/")
 def index():
     """Show the index page for the blog."""
-    return "index"
+    my_blog.get_posts()
+    blog_posts = my_blog.get_posts()
+    return render_template('index.html', posts=blog_posts)
 
 
 @app.route("/<post_id>")
