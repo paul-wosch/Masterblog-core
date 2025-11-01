@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, redirect, url_for
 from myapp.config import TEMPLATES_PATH, STATIC_PATH
 from myapp.models.blog import Blog
 
@@ -35,8 +35,13 @@ def update(post_id):
 
 @app.route("/like/<post_id>", methods=["POST"])
 def like(post_id):
-    """Route to like a blog post."""
-    return "like"
+    """Route to like a blog post.
+
+    Redirect to single post view afterward.
+    """
+    post_obj = get_post_obj_or_404(post_id)
+    post_obj.like()
+    return redirect(f"../show/{post_id}")
 
 
 @app.route("/delete/<post_id>", methods=["POST"])
