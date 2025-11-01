@@ -4,7 +4,7 @@
 class Post:
     """Represent a specific post in a blog."""
 
-    def __init__(self, id: int, author: str, title: str, content: str, likes: int):
+    def __init__(self, author: str, title: str, content: str, likes: int = 0, id: int = -1):
         """Create a new Post instance."""
         self.id = id
         self.author = author
