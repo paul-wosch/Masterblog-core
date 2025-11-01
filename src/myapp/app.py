@@ -14,7 +14,7 @@ def index():
     return render_template('index.html', posts=blog_posts)
 
 
-@app.route("/show/<post_id>")
+@app.route("/show/<int:post_id>")
 def show(post_id):
     """Show a single blog post."""
     post_obj = get_post_obj_or_404(post_id)
@@ -27,13 +27,13 @@ def add():
     return "add"
 
 
-@app.route("/update/<post_id>", methods=["GET", "POST"])
+@app.route("/update/<int:post_id>", methods=["GET", "POST"])
 def update(post_id):
     """Show a form for updating a blog post."""
     return "update"
 
 
-@app.route("/like/<post_id>", methods=["POST"])
+@app.route("/like/<int:post_id>", methods=["POST"])
 def like(post_id):
     """Route to like a blog post.
 
@@ -44,7 +44,7 @@ def like(post_id):
     return redirect(f"../show/{post_id}")
 
 
-@app.route("/delete/<post_id>", methods=["POST"])
+@app.route("/delete/<int:post_id>", methods=["POST"])
 def delete(post_id):
     """Route to delete a blog post.
 
@@ -62,7 +62,7 @@ def page_not_found(error):
 
 def get_post_obj_or_404(post_id):
     """Return a post object for the given id or raise 404."""
-    if not post_id.isdigit() or not (post_obj := my_blog.get(int(post_id))):
+    if not (post_obj := my_blog.get(post_id)):
         abort(404)
     return post_obj
 
