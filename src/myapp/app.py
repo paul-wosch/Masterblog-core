@@ -1,13 +1,7 @@
 from flask import Flask, render_template
-from myapp.storage import write_json_file
-from myapp.config import TEMPLATES_PATH, STATIC_PATH, BLOG_FILE_PATH
+from myapp.config import TEMPLATES_PATH, STATIC_PATH
 from myapp.models.blog import Blog
 
-# Create blog storage if missing (new blog)
-if not BLOG_FILE_PATH.exists():
-    data = []
-    write_json_file(BLOG_FILE_PATH, data)
-# Create the blog instance
 my_blog = Blog()
 
 app = Flask(__name__, template_folder=TEMPLATES_PATH, static_folder=STATIC_PATH)

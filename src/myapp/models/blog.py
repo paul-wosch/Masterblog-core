@@ -1,7 +1,7 @@
 """Provide the Blog class."""
 from myapp.models.post import Post
 from myapp.storage import read_json_file, write_json_file, get_next_id, save_id_to_sequence
-from myapp.config import BLOG_FILE_PATH
+from myapp.config import BLOG_FILE_PATH, SEQUENCE_FILE_PATH
 
 
 class Blog:
@@ -10,7 +10,17 @@ class Blog:
     def __init__(self, blog_data: list = None):
         """Initialize a Blog instance."""
         self.posts = None
+        self._ensure_persistent_storage()
         self.load_blog(blog_data)
+
+    def _ensure_persistent_storage(self, blog_file=BLOG_FILE_PATH, seq_file=SEQUENCE_FILE_PATH):
+        """Create JSON files if they don't exist."""
+        if not blog_file.exists():
+            data = []
+            write_json_file(blog_file, data)
+        if not seq_file.exists():
+            data = {"post": 0}
+            write_json_file(seq_file, data)
 
     def get(self, id):
         """Return a single post object by its id or None if no matching was found."""
