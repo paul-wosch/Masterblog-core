@@ -46,8 +46,13 @@ def like(post_id):
 
 @app.route("/delete/<post_id>", methods=["POST"])
 def delete(post_id):
-    """Route to delete a blog post."""
-    return "delete"
+    """Route to delete a blog post.
+
+    Redirect to index route afterward.
+    """
+    post_obj = get_post_obj_or_404(post_id)
+    my_blog.delete(post_obj)
+    return redirect(url_for("index"))
 
 
 @app.errorhandler(404)
