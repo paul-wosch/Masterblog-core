@@ -10,6 +10,15 @@ h1 {
     color: #4F4F4F;
 }
 
+h1 a {
+    text-decoration: none;
+    color: #4F4F4F;
+}
+
+h1 a:hover {
+    text-decoration: underline;
+}
+
 .post {
     background-color: #FFF;
     border: 1px solid #DDD;
@@ -57,13 +66,15 @@ h1 {
 .navbar {
     text-align: center;
     padding: 10px 0;
+    white-space: nowrap
 }
 
 .navbar a {
     color: white;
     background-color: lightgrey;
     text-decoration: none;
-    display: block;
+    display: inline-block;
+    width: 33%;
     padding: 10px 0;
     border-radius: 8px;
 }

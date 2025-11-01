@@ -8,8 +8,11 @@
 </head>
 <body>
     <header>
-        <div class="navbar"><a href="/add">Add Post</a></div>
-        <h1>Welcome to My Flask Blog!</h1>
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/add">Add Post</a>
+        </div>
+        <h1><a href="/">Welcome to My Flask Blog!</a></h1>
     </header>
     <main>
         {% block content %}{% endblock %}
