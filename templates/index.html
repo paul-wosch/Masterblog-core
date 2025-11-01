@@ -1,39 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Flask Blog</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <div class="navbar"><a href="/add">Add Post</a></div>
-    <h1>Welcome to My Flask Blog!</h1>
-    {% if posts %}
-    {% for post in posts %}
-    <div class="post">
-        <h2><a href="/{{ post.id }}">{{ post.title }}</a></h2>
-        <p><em>Written by {{ post.author }}</em></p>
-        <p>{{ post.content }}</p>
-        <p>{{ post.likes }}</p>
-        <div class="post-actions">
-            <form action="/like/{{ post.id }}" method="post">
-                <button>Like</button>
-            </form>
-            <a href="/update/{{ post.id }}">
-                <button>Update</button>
-            </a>
-            <form action="/delete/{{ post.id }}" method="post">
-                <button>Delete</button>
-            </form>
-        </div>
-    </div>
-    {% endfor %}
-    {% else %}
-    <div class="message">
-        <h2>Your blog is empty</h2>
-        <p><a href="/add">Add your first post!</a></p>
-    </div>
-    {% endif %}
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+{% if posts %}
+{% for post in posts %}
+{% include 'post.html' %}
+{% endfor %}
+{% else %}
+<div class="message">
+    <h2>Your blog is empty</h2>
+    <p><a href="/add">Add your first post!</a></p>
+</div>
+{% endif %}
+{% endblock %}
+
