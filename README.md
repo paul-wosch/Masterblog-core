@@ -88,31 +88,37 @@ The project demonstrates:
 
 Go to your project’s working directory:  
 
-1. **Create virtual environment** (optional):  
+1. **Clone the repository**:  
+   ```bash
+   git clone https://github.com/paul-wosch/Masterblog.git
+   cd Masterblog
+   ```
+
+2. **Create virtual environment** (optional):  
    ```bash
    python -m venv .venv
-   ```  
+   ```
 
-2. **Activate virtual environment** (optional):  
+3. **Activate virtual environment** (optional):  
    ```bash
    source .venv/bin/activate   # Mac/Linux
    .venv\Scripts\activate      # Windows
-   ```  
+   ```
 
-3. **Install local package**:  
+4. **Install local package**:  
    ```bash
    pip install -e .
-   ```  
+   ```
 
-4. **Run the app**:  
+5. **Run the app**:  
    ```bash
    python src/myapp/app.py
-   ```  
+   ```
 
-5. **Deactivate virtual environment** (optional):  
+6. **Deactivate virtual environment** (optional):  
    ```bash
    deactivate
-   ```  
+   ```
 
 The `pip install -e .` makes `myapp` importable, ensuring `app.py` can resolve imports correctly.  
 
