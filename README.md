@@ -116,13 +116,15 @@ The project demonstrates:
 6. **Access the app**:  
    Open your browser and go to [http://127.0.0.1:5000](http://127.0.0.1:5000).  
    - On a fresh install, no posts will be listed.  
-   - Instead, you’ll see a message with a link to **Add Post**.  
+   - You’ll see a message with a link to **Add Post**.  
    - Use that link to create your first blog entry.  
 
-7. **Deactivate virtual environment** (optional):  
-   ```bash
-   deactivate
-   ```
+7. **Stop the server and deactivate environment** (optional):  
+   - Stop the Flask server with `CTRL+C` in the terminal.  
+   - Then deactivate the virtual environment:  
+     ```bash
+     deactivate
+     ```
 
 The `pip install -e .` makes `myapp` importable, ensuring `app.py` can resolve imports correctly.  
 
