@@ -11,7 +11,7 @@
 
 ## 📑 Table of Contents  
 
-- [⚠️ Disclaimer](#️-disclaimer)  
+- [⚠️ Disclaimer](#-disclaimer)  
 - [📝 Description](#-description)  
 - [✨ Features](#-features)  
 - [🛠️ Tech Stack](#-tech-stack)  
