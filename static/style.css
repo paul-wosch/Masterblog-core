@@ -1,0 +1,131 @@
+* {
+    color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+h1,
+h1 a,
+.post h2 a,
+.message a {
+    color: #4f4f4f;
+}
+
+h1 a,
+.post h2 a,
+.message a {
+    text-decoration: none;
+}
+
+h1 a:hover,
+.post h2 a:hover,
+.message a:hover {
+    text-decoration: underline;
+}
+
+.post,
+.message {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.post h2,
+.message h2 {
+    margin-top: 0;
+}
+
+.post p,
+.message p {
+    margin: 10px 0;
+}
+
+.message {
+    background-color: #eef;
+    text-align: center;
+}
+
+.navbar {
+    text-align: center;
+    padding: 10px 0;
+    white-space: nowrap;
+}
+
+.navbar a {
+    color: white;
+    background-color: lightgrey;
+    text-decoration: none;
+    display: inline-block;
+    width: 33%;
+    padding: 10px 0;
+    border-radius: 8px;
+}
+
+.navbar a:hover {
+    background-color: dimgrey;
+}
+
+.post-actions {
+    display: block;
+}
+
+.post-actions form {
+    display: inline;
+}
+
+.post-actions a {
+    text-decoration: none;
+}
+
+#add-update-form-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.form input[type="text"],
+.form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.likes-counter {
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.likes-counter::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAyMSAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAuMTAxIDQuNDE3UzguODk1LjIwNyA1LjExMS4yMDdjLTQuNDY1IDAtMTAuOTY3IDYuODQ2IDUuMDgyIDE3LjU5MkMyNS4yMzcgNy4wMyAxOS42NjUuMjAyIDE1LjUwMS4yMDJjLTQuMTYyIDAtNS40IDQuMjE1LTUuNCA0LjIxNXoiIGZpbGw9IiNGRkE1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==") no-repeat center;
+    background-size: contain;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}

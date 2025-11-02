@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Update: {{ post.title }}{% endblock %}
+{% block content %}
+{% set subtitle = "Update: " + post.title %}
+{% include 'form.html' %}
+{% endblock %}
