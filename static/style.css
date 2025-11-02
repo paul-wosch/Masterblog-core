@@ -4,73 +4,62 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     padding: 20px;
-    color: #333;
 }
 
-h1 {
+h1,
+h3 {
     text-align: center;
-    color: #4F4F4F;
 }
 
-h1 a {
-    text-decoration: none;
-    color: #4F4F4F;
+h1,
+h1 a,
+.post h2 a,
+.message a {
+    color: #4f4f4f;
 }
 
-h1 a:hover {
-    text-decoration: underline;
-}
-
-.post {
-    background-color: #FFF;
-    border: 1px solid #DDD;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
-.post h2 {
-    margin-top: 0;
-}
-
+h1 a,
 .post h2 a,
 .message a {
     text-decoration: none;
-    color: #333;
 }
 
+h1 a:hover,
 .post h2 a:hover,
 .message a:hover {
     text-decoration: underline;
 }
 
-.post p {
-    margin: 10px 0;
-}
-
+.post,
 .message {
-    background-color: #EEF;
-    border: 1px solid #DDD;
+    background-color: #fff;
+    border: 1px solid #ddd;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    text-align: center;
 }
 
+.post h2,
 .message h2 {
     margin-top: 0;
 }
 
+.post p,
 .message p {
     margin: 10px 0;
+}
+
+.message {
+    background-color: #eef;
+    text-align: center;
 }
 
 .navbar {
     text-align: center;
     padding: 10px 0;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 .navbar a {
@@ -99,29 +88,21 @@ h1 a:hover {
     text-decoration: none;
 }
 
-h3 {
-    text-align: center;
-}
-
-.button, #button {
-
-}
-
 #add-update-form-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 .form form {
-  width: 100%;
-  max-width: 600px; /* Adjust as needed */
+    width: 100%;
+    max-width: 600px;
 }
 
 .form input[type="text"],
 .form textarea {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-  margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
 }
