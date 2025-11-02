@@ -7,6 +7,24 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 [![Quick Start](https://img.shields.io/badge/⚡-Quick%20Start-orange)](#-quick-start)
 
+---
+
+## 📑 Table of Contents  
+
+- [⚠️ Disclaimer](#️-disclaimer)  
+- [📝 Description](#-description)  
+- [✨ Features](#-features)  
+- [🛠️ Tech Stack](#-tech-stack)  
+- [📦 Key Dependencies](#-key-dependencies)  
+- [📁 Project Structure](#-project-structure)  
+- [🛠️ Development Setup](#-development-setup)  
+  - [🚀 Quick Start](#-quick-start)  
+  - [📖 Step‑by‑Step Guide](#-step-by-step-guide)  
+- [👥 Contributing](#-contributing)  
+- [📄 License](#-license)  
+
+---
+
 ## ⚠️ Disclaimer  
 This project was created as part of my learning journey during a multi‑month software engineering course. It should be viewed as such: a work in progress where I applied my best effort and current knowledge. The focus of this project was on **Object‑Oriented Programming (OOP)**, **Flask**, **Jinja2 templates**, and **Python packaging**. While not production‑ready, it reflects my growth and dedication to learning software engineering principles.
 
