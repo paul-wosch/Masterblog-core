@@ -1,6 +1,6 @@
 """Provide functions to keep track of auto-incremented primary keys."""
-from myapp.storage import read_json_file, write_json_file
-from myapp.config import SEQUENCE_FILE_PATH
+from masterblog.storage import read_json_file, write_json_file
+from masterblog.config import SEQUENCE_FILE_PATH
 
 
 def get_next_id(model: str) -> int:

@@ -1,7 +1,7 @@
 """Provide the Blog class."""
-from myapp.models.post import Post
-from myapp.storage import read_json_file, write_json_file, get_next_id, save_id_to_sequence
-from myapp.config import BLOG_FILE_PATH, SEQUENCE_FILE_PATH
+from masterblog.models.post import Post
+from masterblog.storage import read_json_file, write_json_file, get_next_id, save_id_to_sequence
+from masterblog.config import BLOG_FILE_PATH, SEQUENCE_FILE_PATH
 
 
 class Blog:
