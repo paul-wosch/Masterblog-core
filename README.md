@@ -78,6 +78,8 @@ The project demonstrates:
 ├── LICENSE              # MIT license text
 ├── pyproject.toml       # Project metadata and dependencies
 ├── README.md            # Project documentation
+├── Data            	 # JSON data storage
+│   └── .gitkeep		 # Keeps Data dir in Git
 ├── src/                 # Main application source code
 │   └── myapp
 │       ├── app.py       # Flask app with routes
