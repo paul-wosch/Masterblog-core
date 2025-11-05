@@ -6,8 +6,8 @@ and liking blog posts. It initializes the Blog model and handles
 routing requests to the appropriate templates or actions.
 """
 from flask import Flask, render_template, abort, redirect, url_for, request
-from masterblog.config import TEMPLATES_PATH, STATIC_PATH, BLOG_FILE_PATH, SEQUENCE_FILE_PATH
-from masterblog.models.blog import Blog
+from masterblog_core.config import TEMPLATES_PATH, STATIC_PATH, BLOG_FILE_PATH, SEQUENCE_FILE_PATH
+from masterblog_core.models.blog import Blog
 
 my_blog = Blog(BLOG_FILE_PATH, SEQUENCE_FILE_PATH)
 

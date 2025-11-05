@@ -1,6 +1,6 @@
 """Provide the Blog class."""
-from masterblog.models.post import Post
-from masterblog.storage import read_json_file, write_json_file, get_next_id, save_id_to_sequence
+from masterblog_core.models.post import Post
+from masterblog_core.storage import read_json_file, write_json_file, get_next_id, save_id_to_sequence
 
 
 class Blog:

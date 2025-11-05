@@ -1,5 +1,5 @@
 """Provide functions to keep track of auto-incremented primary keys."""
-from masterblog.storage import read_json_file, write_json_file
+from masterblog_core.storage import read_json_file, write_json_file
 
 
 def get_next_id(seq_file_path, model: str) -> int:
