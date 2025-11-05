@@ -5,14 +5,14 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "masterblog-core"
 version = "0.1.0"
-dependencies = [
-    "Flask"
-]
-description = "A blog application with JSON storage (core only)"
+description = "A blog engine core with JSON storage"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["masterblog*"]
+include = ["masterblog_core*"]
 
 [tool.setuptools.package-dir]
 "" = "src"
