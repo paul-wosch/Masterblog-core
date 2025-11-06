@@ -1,6 +1,6 @@
 """Provide the Blog class."""
-from masterblog.models.post import Post
-from masterblog.storage import read_json_file, write_json_file, get_next_id, save_id_to_sequence
+from masterblog_core.models.post import Post
+from masterblog_core.storage import read_json_file, write_json_file, get_next_id, save_id_to_sequence
 
 
 class Blog:
@@ -82,7 +82,6 @@ class Blog:
         if post_id is None and post_object is None:
             raise TypeError("Missing argument: post_object or post_id.")
         # Use existing post object or get one from post id
-        print("retrieve post object")
         if post_id is not None and post_object is None:
             post_object = self.get(post_id)
         # Like post and save blog posts
