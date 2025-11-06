@@ -54,6 +54,7 @@ class Blog:
         self.posts.append(new_post)
         save_id_to_sequence(self.seq_file_path, "post", new_post.get_id())
         self.save_blog()
+        return self.get(next_id)
 
     def update(self, post_id=None, post_object=None, **kwargs):
         """Update a post in the collection.
