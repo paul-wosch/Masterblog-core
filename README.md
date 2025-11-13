@@ -11,7 +11,7 @@
 
 ## 📑 Table of Contents  
 
-- [⚠️ Disclaimer](#-disclaimer)  
+- [⚠️ Disclaimer](#%EF%B8%8F-disclaimer)  
 - [📝 Description](#-description)  
 - [✨ Features](#-features)  
 - [📁 Project Structure](#-project-structure)  
@@ -20,7 +20,7 @@
 - [🚀 Usage](#-usage)  
 - [🔖 Versioning](#-versioning)  
 - [👥 Contributing](#-contributing)  
-- [🏷️ Badges](#-badges)  
+- [🏷️ Badges](#%EF%B8%8F-badges)  
 - [🔗 See Also](#-see-also)  
 - [📄 License](#-license) 
 
